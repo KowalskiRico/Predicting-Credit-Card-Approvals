@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<!--
+	Eventually by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+	<head>
+		<title>Credit Card Approval Predictor</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/predictor.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<h1>Credit Card Approval Assessment</h1>
+				<p>Fill in the applicant details below to predict<br />
+				whether a credit card application would be approved.</p>
+			</header>
+
+		<!-- Prediction Form -->
+			<form id="predictor-form" method="post" action="#">
+				<div class="form-grid">
+					<div class="form-group">
+						<label for="car_owner">Car Owner</label>
+						<select id="car_owner" name="car_owner">
+							<option value="Y">Yes</option>
+							<option value="N">No</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="property_owner">Property Owner</label>
+						<select id="property_owner" name="property_owner">
+							<option value="Y">Yes</option>
+							<option value="N">No</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="income">Annual Income</label>
+						<input type="number" id="income" name="income" placeholder="e.g., 150000" required />
+					</div>
+					<div class="form-group">
+						<label for="education">Education Level</label>
+						<select id="education" name="education">
+							<option value="Higher education">Higher Education</option>
+							<option value="Secondary / secondary special">Secondary</option>
+							<option value="Incomplete higher">Incomplete Higher</option>
+						</select>
+					</div>
+				</div>
+				<div class="actions">
+					<input type="submit" value="Predict Eligibility" />
+					<span id="result" class="message"></span>
+				</div>
+			</form>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<ul class="copyright">
+					<li>&copy; Credit Card Approval Predictor</li>
+				</ul>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/predictor.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,109 @@
+/* Credit Card Approval Predictor - additions on top of Eventually (main.css) */
+
+#header { max-width: 40em; }
+
+#predictor-form {
+	max-width: 40em;
+	width: 100%;
+}
+
+#predictor-form .form-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1.25em 1.5em;
+	margin-bottom: 2em;
+}
+
+#predictor-form .form-group label {
+	margin: 0 0 0.5em 0;
+}
+
+/* Template only styles text/password/email inputs; extend to number inputs. */
+#predictor-form input[type="number"] {
+	-moz-appearance: textfield;
+	appearance: none;
+	background-color: transparent;
+	border: solid 2px rgba(255, 255, 255, 0.35);
+	border-radius: 6px;
+	color: inherit;
+	display: block;
+	height: 2.75em;
+	outline: 0;
+	padding: 0 1em;
+	transition: border-color 0.2s ease, background-color 0.2s ease;
+	width: 100%;
+}
+
+#predictor-form input[type="number"]::-webkit-outer-spin-button,
+#predictor-form input[type="number"]::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+#predictor-form input[type="number"]:focus {
+	background-color: rgba(255, 255, 255, 0.125);
+	border-color: #1cb495;
+}
+
+#predictor-form .actions {
+	align-items: center;
+	display: flex;
+	position: relative;
+}
+
+#predictor-form .actions .message {
+	margin-left: 1em;
+}
+
+/* Footer: keep it in the flow so it never overlaps the taller form. */
+#footer {
+	bottom: auto;
+	left: auto;
+	margin: 2em 0 0 0;
+	position: relative;
+}
+
+@media screen and (max-width: 480px) {
+	#predictor-form .form-grid { grid-template-columns: 1fr; }
+	#predictor-form .actions { align-items: stretch; flex-direction: column; }
+	#predictor-form .actions .message { height: auto; line-height: 1.5em; margin: 1em 0 0 0; }
+}
+
+/* ---- Typography & colour overrides ---- */
+body, input, select, textarea, button {
+	font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+	color: #fff;
+}
+
+#header p,
+#footer,
+#footer .copyright,
+#footer .copyright a,
+label {
+	color: #fff;
+}
+
+#footer { opacity: 0.85; }
+
+::-webkit-input-placeholder { color: rgba(255, 255, 255, 0.8) !important; }
+::-moz-placeholder { color: rgba(255, 255, 255, 0.8) !important; }
+
+#predictor-form select,
+#predictor-form input[type="number"] {
+	border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Warnings / errors in red */
+#predictor-form input:user-invalid,
+#predictor-form select:user-invalid {
+	border-color: #ff2361;
+}
+#predictor-form .message.failure { color: #ff2361; }
+
+/* ---- Static background image (no slideshow, no panning) ---- */
+#bg div,
+#bg div.visible {
+	animation: none !important;
+	-webkit-animation: none !important;
+	width: 100%;
+}
